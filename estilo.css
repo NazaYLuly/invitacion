@@ -59,7 +59,7 @@ p {
 }
 
 body {
-    background: url('img/portada.gif') no-repeat center center fixed;
+    background: url('img/portada.png') no-repeat center center fixed;
     background-color: #434343;
     background-size: cover;
     color: var(--texto);
