@@ -72,7 +72,7 @@ body {
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('img/taka_taka.gif') no-repeat center center;
+  background: url('img/taka3.gif') no-repeat center center;
   background-size: cover;
   z-index: -999;
   animation: backgroundMove 60s linear infinite;
