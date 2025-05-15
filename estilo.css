@@ -98,7 +98,6 @@ body {
     background: color(rgb(61, 60, 60)) var(--tarjeta);
     border: 1px solid var(--borde);
     backdrop-filter: blur(12px);
-    box-shadow: 0 8px 24px rgba(243, 235, 235, 0.3);
     border-radius: 1.5rem;
     padding: 2rem;
     margin: 2rem auto;
