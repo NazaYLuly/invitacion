@@ -1,0 +1,435 @@
+:root {
+    --tarjeta: rgba(255, 255, 255, 0.08);
+    --borde: rgba(255, 255, 255, 0.15);
+    --texto: #f0f0f0;
+    --primario: #e5c18c;
+    --secundario: #ffd166;
+}
+
+.arrow {
+    width: 10rem;
+    height: 5rem;
+    margin-top: 85vh;
+    position: absolute;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+.abrir-formulario {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+p {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+#gracias {
+    text-align: center;
+}
+
+#nyl {
+    text-align: right;
+}
+
+body {
+    background: url('img/taka_taka.gif') no-repeat fixed;
+    background-color: #434343;
+    background-size: cover;
+    background-position: center top;
+    min-height: 100vh;
+    max-height: 100vh;
+    color: var(--texto);
+    line-height: 1.6;
+    position: relative;
+}
+
+#background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    /* Inicialmente transparente */
+    z-index: -1;
+    /* Detrás del contenido */
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+}
+
+/* HERO sin fondo, solo para altura inicial */
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tarjetas translúcidas */
+.tarjeta,
+.card-translucida {
+    background: color(rgb(61, 60, 60)) var(--tarjeta);
+    border: 1px solid var(--borde);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(243, 235, 235, 0.3);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 95%;
+    /* Ancho máximo para todas las tarjetas */
+    position: relative;
+    z-index: 2;
+}
+.timeline_card {
+    background-image: url(img/timeline3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.5rem;
+    margin: 2rem auto;
+    max-width: 95%;
+    padding-bottom: calc(95vw - 6rem);
+    box-shadow: 0 8px 24px rgba(243, 235, 235, 0.3);
+    position: relative;
+}
+
+/* Estilos específicos para la tarjeta de la cuenta regresiva */
+#countdown-card {
+    background-image: url(img/countdown_section.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.5rem;
+    margin: 2rem auto;
+    max-width: 95%;
+    padding-bottom: calc(95vw - 1.8rem);
+    box-shadow: 0 8px 24px rgba(243, 235, 235, 0.3);
+    position: relative;
+}
+
+#countdown-card .contenido-countdown {
+    position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+}
+
+#countdown-card h2 {
+    color: #000000;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.countdown {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+/* Secciones generales */
+section {
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+h1,
+h2 {
+    color: var(--primario);
+    text-align: center;
+}
+
+
+/* Formularios */
+input,
+textarea,
+button,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+button {
+    background-color: var(--primario);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 1rem;
+}
+
+.tarjeta.scroll-shadow,
+.card-translucida.scroll-shadow {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.4s ease;
+}
+
+/* Botón que abre el formulario */
+.abrir-formulario {
+    background: var(--primario);
+    color: black;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    font-size: 1.2rem;
+    max-width: 95%;
+    display: block;
+    margin: auto;
+}
+
+.abrir-formulario:hover {
+    transform: scale(1.05);
+}
+
+/* Ocultar modal por defecto */
+#modal-rsvp {
+    display: none;
+}
+
+/* Estilo del modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Contenido de la ventana */
+.modal-contenido {
+    background: rgba(30, 30, 30, 0.95);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 500px;
+    width: 90%;
+    color: white;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.5s ease;
+}
+
+/* Botón cerrar */
+.cerrar-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #ff5678;
+    cursor: pointer;
+}
+
+/* Tipografía y controles */
+.modal-contenido h2 {
+    color: hsl(346, 100%, 33%);
+    text-align: center;
+}
+
+.modal-contenido label,
+.modal-contenido legend {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.modal-contenido input[type="text"],
+.modal-contenido select {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: #222;
+    color: white;
+}
+
+/* Radios */
+.radio-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+/* Botón submit */
+.modal-contenido button[type="submit"] {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: hsl(346, 100%, 33%);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-contenido button[type="submit"]:hover {
+    background-color: hsl(346, 100%, 33%);
+}
+
+/* Mensaje enviado */
+.mensaje-enviado {
+    margin-top: 1rem;
+    text-align: center;
+    color: #90ee90;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cerrar-formulario {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #111;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.cerrar-formulario:hover {
+    background-color: #333;
+}
+
+.tarjeta-confirmacion {
+    position: relative;
+    /* Necesario para que el botón se posicione dentro */
+}
+
+form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+form fieldset legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    /* o el color que estés usando */
+
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/*enlace del dress code*/
+a {
+    text-decoration: none;
+    color: var(--secundario);
+}
+
+.abrir-dress, #enviar_cancion {
+    background-color: hsl(346, 100%, 33%);
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-family: "Playfair Display", serif;
+
+}
+::placeholder{
+    font-family: "Lexend Deca", sans-serif;
+}
+
+@media (min-width: 600px) and (max-width: 779px) {
+    .tarjeta, .timeline_card, #countdown-card{
+        max-width: 80%;
+    }
+    .timeline_card {
+        padding-bottom: calc(95vw - 9rem);
+    }
+    #countdown-card{
+        padding-bottom: calc(95vw - 10rem);
+    }
+}
+@media (min-width: 780px) {
+    *{
+        display: none;
+    }
+}
