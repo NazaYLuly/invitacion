@@ -59,11 +59,7 @@ p {
 }
 
 body {
-    background: url('img/taka_taka.gif') no-repeat fixed;
-    background-color: #434343;
-    background-size: cover;
-    background-position: center top;
-    
+    background-color: #434343;    
     color: var(--texto);
     line-height: 1.6;
     position: relative;
