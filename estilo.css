@@ -86,14 +86,10 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
-    /* Inicialmente transparente */
     z-index: -1;
-    /* Detrás del contenido */
     transition: background-color 0.3s ease;
-    /* Transición suave */
 }
 
-/* HERO sin fondo, solo para altura inicial */
 #hero {
     height: 100vh;
     display: flex;
@@ -101,7 +97,6 @@ body {
     align-items: center;
 }
 
-/* Tarjetas translúcidas */
 .tarjeta,
 .card-translucida {
     background: color(rgb(61, 60, 60)) var(--tarjeta);
@@ -111,7 +106,6 @@ body {
     padding: 2rem;
     margin: 2rem auto;
     max-width: 95%;
-    /* Ancho máximo para todas las tarjetas */
     position: relative;
     z-index: 2;
 }
@@ -127,7 +121,6 @@ body {
     position: relative;
 }
 
-/* Estilos específicos para la tarjeta de la cuenta regresiva */
 #countdown-card {
     background-image: url(img/countdown_section.jpg);
     background-repeat: no-repeat;
@@ -173,7 +166,6 @@ body {
     display: inline-block;
 }
 
-/* Secciones generales */
 section {
     padding: 2rem 1rem;
     position: relative;
@@ -186,8 +178,6 @@ h2 {
     text-align: center;
 }
 
-
-/* Formularios */
 input,
 textarea,
 button,
@@ -219,7 +209,6 @@ iframe {
     transition: box-shadow 0.4s ease;
 }
 
-/* Botón que abre el formulario */
 .abrir-formulario {
     background: var(--primario);
     color: black;
@@ -239,12 +228,10 @@ iframe {
     transform: scale(1.05);
 }
 
-/* Ocultar modal por defecto */
 #modal-rsvp {
     display: none;
 }
 
-/* Estilo del modal */
 .modal {
     position: fixed;
     top: 0;
@@ -258,7 +245,6 @@ iframe {
     z-index: 1000;
 }
 
-/* Contenido de la ventana */
 .modal-contenido {
     background: rgba(30, 30, 30, 0.95);
     padding: 2rem;
@@ -271,7 +257,6 @@ iframe {
     animation: fadeIn 0.5s ease;
 }
 
-/* Botón cerrar */
 .cerrar-modal {
     position: absolute;
     top: 1rem;
@@ -283,7 +268,6 @@ iframe {
     cursor: pointer;
 }
 
-/* Tipografía y controles */
 .modal-contenido h2 {
     color: hsl(346, 100%, 33%);
     text-align: center;
@@ -308,7 +292,6 @@ iframe {
     color: white;
 }
 
-/* Radios */
 .radio-group {
     display: flex;
     justify-content: space-around;
@@ -319,7 +302,6 @@ iframe {
     font-weight: normal;
 }
 
-/* Botón submit */
 .modal-contenido button[type="submit"] {
     margin-top: 1.5rem;
     width: 100%;
@@ -337,7 +319,6 @@ iframe {
     background-color: hsl(346, 100%, 33%);
 }
 
-/* Mensaje enviado */
 .mensaje-enviado {
     margin-top: 1rem;
     text-align: center;
@@ -380,7 +361,6 @@ iframe {
 
 .tarjeta-confirmacion {
     position: relative;
-    /* Necesario para que el botón se posicione dentro */
 }
 
 form fieldset {
@@ -393,8 +373,6 @@ form fieldset legend {
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #fff;
-    /* o el color que estés usando */
-
 }
 
 .icon {
@@ -403,10 +381,8 @@ form fieldset legend {
     display: block;
     margin-left: auto;
     margin-right: auto;
-
 }
 
-/*enlace del dress code*/
 a {
     text-decoration: none;
     color: var(--secundario);
