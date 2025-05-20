@@ -22,11 +22,8 @@
     <header id="hero">
         <img src="icons/arrow.gif" class="arrow">
     </header>
-
     <section class="tarjeta centrado" data-aos="fade-up">
-
         <img src="icons/heart.gif" class="icon">
-
         <h1>¡Nuestra Boda!</h1>
         <p>Después de muchas aventuras, risas, llantos y algún que otro amarre... ¡llegamos a este momento! Y queremos
             compartirlo con vos. Nos alegraría que puedas ser parte de esta noche, que con tanto esfuerzo armamos junto a nuestros seres queridos, no solo para celebrar nuestra unión, sino también para dar una 
@@ -37,14 +34,12 @@
         <br>
         <p id="nyl">Naza & Luly</p>
     </section>
-
     <section id="countdown-card" data-aos="fade-up">
         <div class="contenido-countdown">
             <h2>Cuenta regresiva</h2>
             <div class="countdown" id="countdown"></div>
         </div>
     </section>
-
     <section class="tarjeta" data-aos="fade-up">
 
         <img src="icons/music.gif" class="icon">
@@ -58,7 +53,6 @@
                 <button type="submit" id="enviar_cancion">♩♬ Enviar ♫♪</button>
             </form>
     </section>
-
     <section class="tarjeta" data-aos="fade-up">
 
         <img src="icons/gift.gif" class="icon">
@@ -77,90 +71,61 @@
         <br>
         <p id="gracias">¡Gracias!</p>
     </section>
-
-
-    <!-- Botón para abrir el formulario -->
     <button class="abrir-formulario" data-aos="fade-up">Confirmar Asistencia ✉</button>
-
-    <!-- Modal del formulario -->
     <div class="modal" id="modal-rsvp">
         <div class="modal-contenido">
             <button class="cerrar-formulario" id="cerrar-formulario" onclick="cerrarFormulario()">✖</button>
-
             <h2>Confirmación de Asistencia</h2>
             <p>El formulario es individual.<br>Si venís con acompañantes, repetí el proceso por cada uno.</p>
-
             <form id="formulario-rsvp" onsubmit="enviarFormulario(event)">
                 <label for="nombre">Apellido y Nombre</label>
                 <input type="text" id="nombre" name="nombre" required>
-
                 <label for="menu">¿Necesitás un menú especial?</label>
                 <select id="menu" name="menu" required>
                     <option value="Ninguno">Ninguno</option>
                     <option value="Celíaco">Celíaco</option>
                     <option value="Vegetariano">Veggie</option>
                 </select>
-
                 <fieldset class="radio-group">
                     <legend>Confirmación</legend>
                     <label><input type="radio" name="asistencia" value="Asistiré" required> Asistiré</label>
                     <label><input type="radio" name="asistencia" value="No asistiré" required> No asistiré</label>
                 </fieldset>
-
                 <button type="submit">Enviar</button>
                 <p id="mensaje-enviado" class="mensaje-enviado" style="display: none;">🎉 ¡Formulario enviado con éxito!
                 </p>
             </form>
         </div>
     </div>
-
-
-
-
-
     <section class="tarjeta" data-aos="fade-up">
-
         <h2 class="centrado">Detalles del evento</h2>
         <h4>• 25 de julio 2025 - 21 hs •</h4>
         <br>
-
         <img src="icons/location.gif" class="icon">
-
         <h4>• Av.Calchaqui 3873, Quilmes •</h4>
         <br>
-
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.8590655816233!2d-58.282086124516724!3d-34.759142865722666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f0ead1f89d9%3A0x8920cc88a0249d59!2sClahe%20Eventos%20Quilmes%20V!5e0!3m2!1ses-419!2sar!4v1746378880717!5m2!1ses-419!2sar"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         <br>
         <br>
-
         <h4>• Dress code: Elegante, colores oscuros.</h4>
         <p>y como muchos consultaron, acá les dejamos:</p>
         <button class="abrir-dress"><a target="_blank" href="https://pin.it/6Zqx5uPu5">Algunas ideas💡</a></button>
     </section>
-
     <section class="timeline_card" data-aos="fade-up">
-
         <img src="icons/clock.gif" class="icon">
-
         <h2 class="centrado">Timeline</h2>
-        
     </section>
-
     <section class="tarjeta" data-aos="fade-up">
-
         <img src="icons/surprise.gif" class="icon">
-
         <h2 class="centrado"> Esto viene con sorpresa </h2>
         <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSetL32X1UitSf-s7mgVx89tBUSSwQ6-6YrcExmtkyXUomdirQ/viewform?embedded=true"
             width="640" height="3464" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
     </section>
-
     <script>
-        // Cuenta regresiva al 25 de julio a las 21:00 hs
         const countdown = document.getElementById('countdown');
         const eventDate = new Date('2025-07-25T21:00:00');
 
@@ -195,23 +160,19 @@
         });
     </script>
     <script>
-        // Escuchar el evento de scroll
-        const overlay = document.getElementById('background-overlay'); // Asegúrate de que el ID coincida con tu CSS
-        const opacidadInicial = 0; // Define la opacidad inicial
-        const opacidadFinal = 0.6; // Define la opacidad máxima a alcanzar
-        const distanciaParaOpacidadMaxima = 500; // Define la distancia de scroll en píxeles para alcanzar la opacidad máxima
+        const overlay = document.getElementById('background-overlay');
+        const opacidadInicial = 0;
+        const opacidadFinal = 0.6;
+        const distanciaParaOpacidadMaxima = 500;
 
         window.addEventListener('scroll', () => {
             if (overlay) {
                 const scrollPosition = window.scrollY;
 
-                // Calcula la opacidad gradualmente basada en la posición del scroll
                 let nuevaOpacidad = opacidadInicial + (scrollPosition / distanciaParaOpacidadMaxima) * (opacidadFinal - opacidadInicial);
 
-                // Asegura que la opacidad no exceda la opacidad final
                 nuevaOpacidad = Math.min(nuevaOpacidad, opacidadFinal);
 
-                // Asegura que la opacidad no sea menor que la opacidad inicial (aunque aquí ya es 0)
                 nuevaOpacidad = Math.max(nuevaOpacidad, opacidadInicial);
 
                 overlay.style.backgroundColor = `rgba(0, 0, 0, ${nuevaOpacidad})`;
@@ -220,45 +181,37 @@
             }
         });
 
-        // Obtén el formulario y el modal
         const formularioRsvp = document.getElementById('formulario-rsvp');
         const modalRsvp = document.getElementById('modal-rsvp');
         const mensajeEnviado = document.getElementById('mensaje-enviado');
         const abrirFormularioBotones = document.querySelectorAll('.abrir-formulario');
         const cerrarFormularioBoton = document.getElementById('cerrar-formulario');
 
-        // URL de la API Google Apps Script
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxFyOYSogvz9yAC4rAryOVocXGNc1RD5E1rr09WHp6VetivioRLiHuzsVtKL3mSvyRk/exec';
 
-        // Función para abrir el modal
         abrirFormularioBotones.forEach(boton => {
             boton.addEventListener('click', () => {
                 modalRsvp.style.display = 'flex';
             });
         });
 
-        // Función para cerrar el modal
         cerrarFormularioBoton.addEventListener('click', () => {
             modalRsvp.style.display = 'none';
         });
 
-        // Función para manejar el envío del formulario
         formularioRsvp.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Deshabilitar el botón para evitar envíos duplicados
             const submitButton = formularioRsvp.querySelector('button[type="submit"]');
             submitButton.disabled = true;
             submitButton.textContent = 'Enviando...';
 
-            // Recoger los datos del formulario
             const formData = new FormData(formularioRsvp);
             const data = {};
             formData.forEach((value, key) => {
                 data[key] = value;
             });
 
-            // Enviar los datos al script de Google Apps Script
             fetch(scriptURL, {
                 method: 'POST',
                 mode: 'no-cors',
@@ -266,7 +219,7 @@
             })
             .then(() => {
                 mensajeEnviado.style.display = 'block';
-                formularioRsvp.reset(); // Limpiar el formulario
+                formularioRsvp.reset();
 
                 setTimeout(() => {
                     modalRsvp.style.display = 'none';
@@ -284,7 +237,6 @@
         });
     </script>
     <script>
-        //form canciones
         const formCancion = document.getElementById("form_cancion");
         const textarea = document.getElementById("canciones");
 
@@ -308,7 +260,6 @@
             });
         }
     </script>
-
 </body>
 
 </html>
